@@ -146,7 +146,7 @@ model.summary(); // Imprime a arquitetura no console
 // Compilação: Define o "Juiz" (Loss) e o "Professor" (Optimizer)
 model.compile({
   optimizer: 'adam', // Ajusta os pesos de forma eficiente
-  loss: (CLASS_NAMES.length === 2) ? 'binaryCrossentropy': 'categoricalCrossentropy', 
+  loss: 'categoricalCrossentropy', // O "Juiz" especializado em múltiplas categorias (3 ou mais)
   metrics: ['accuracy'] // Queremos monitorar a porcentagem de acertos
 });
 
